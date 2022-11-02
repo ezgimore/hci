@@ -34,6 +34,7 @@ public class CreateAccountScene : MonoBehaviour
 
     public void HomeScene()
     {
+        // TODO check values of amenities
         SceneManager.LoadScene("Home");
     }
 }
