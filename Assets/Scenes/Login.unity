@@ -280,6 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a356a94ca83d2a45a75b27bc30fbbf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  username: {fileID: 1955890858}
+  passcode: {fileID: 957745552}
 --- !u!1 &270575663
 GameObject:
   m_ObjectHideFlags: 0

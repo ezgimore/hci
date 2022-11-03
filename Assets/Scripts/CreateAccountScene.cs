@@ -8,7 +8,6 @@ public class CreateAccountScene : MonoBehaviour
 {
     // set via the Unity editor
     public GameObject account_panel, info_panel;
-
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +29,12 @@ public class CreateAccountScene : MonoBehaviour
 
         account_panel.SetActive(false);
         info_panel.SetActive(true);
+    }
+
+    public void ShowAccountPanel()
+    {
+        account_panel.SetActive(true);
+        info_panel.SetActive(false);
     }
 
     public void HomeScene()
