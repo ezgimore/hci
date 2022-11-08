@@ -25,7 +25,7 @@ public class ScrollableInputPanel : MonoBehaviour
         panelHeightOriginal = panelRectTrans.rect.height;
     }
 
-    public void LateUpdate()
+    public void Update()
     {
         if (inputField.isFocused)
         {
@@ -38,11 +38,13 @@ public class ScrollableInputPanel : MonoBehaviour
         }   
         else if (currentKeyboardHeightRatio != 0f)
         {
+            currentKeyboardHeightRatio = 0f;
             if (panelRectTrans.offsetMin != panelOffsetMinOriginal)
             {
-                Invoke("DelayedReset", 0.3f);
+                //Invoke("DelayedReset", 0.3f);
+                DelayedReset();
             }
-            currentKeyboardHeightRatio = 0f;
+            //currentKeyboardHeightRatio = 0f;
         }
     }
 
@@ -50,7 +52,7 @@ public class ScrollableInputPanel : MonoBehaviour
     {
         
         if (Application.isEditor) {
-            return 0.0f; // adjust value to replicate effect in editor        
+            return 0.2f; // adjust value to replicate effect in editor        
         }
 
         #if UNITY_ANDROID        

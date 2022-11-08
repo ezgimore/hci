@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class CreateAccountScene : MonoBehaviour
 {
     // set via the Unity editor
     public GameObject account_panel, info_panel;
+    public TMP_InputField u_name, pass, vpass, address; 
+
     
     // Start is called before the first frame update
     void Start()
@@ -25,8 +29,19 @@ public class CreateAccountScene : MonoBehaviour
     // called from the OnClick function of continue button
     public void ShowInfoPanel()
     {
-        // TODO: check if password and verify password are the same
-
+       
+        String u = u_name.GetComponent<TMP_InputField>().text;
+        String p = pass.GetComponent<TMP_InputField>().text;
+        String vp = vpass.GetComponent<TMP_InputField>().text;
+        String a = address.GetComponent<TMP_InputField>().text;
+        if (String.Equals(u,"") || String.Equals(p,"") || String.Equals(vp,"") || String.Equals(a,"") )
+        {
+            return;
+        }
+        else if (!String.Equals(p,vp))
+        {
+            return;
+        }
         account_panel.SetActive(false);
         info_panel.SetActive(true);
     }
