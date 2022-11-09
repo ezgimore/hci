@@ -8,6 +8,24 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/AC.unity
+    guid: 4cc19b635aa143d4fb6607cacf09b881
+  - enabled: 1
+    path: Assets/Scenes/Home.unity
+    guid: 79e61ba41ed5a6942b1579ca78d3dc27
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 6765f8ead9d961d4c808d1770840d031
+  - enabled: 1
+    path: Assets/Scenes/CreateAccount.unity
+    guid: 8107ed2a4bf18284890e080bacc95f41
+  - enabled: 1
+    path: Assets/Scenes/ContactProfessional.unity
+    guid: aa3c554a8bff24a2e894920f38d4983d
+  - enabled: 1
+    path: Assets/Scenes/MaintenanceTask.unity
+    guid: 3c20f2f36a6e73f40a5e7477eac98f90
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: b75a5981cfebe8b4fa360fff292172e2, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 918e9c4dc9045034e94139c00ce52f74, type: 2}
