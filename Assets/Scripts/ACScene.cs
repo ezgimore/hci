@@ -26,4 +26,14 @@ public class ACScene : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+
+        public void BlueprintsScene()
+    {
+        SceneManager.LoadScene("Blueprints");
+    }
+
+    public void DocumentsScene()
+    {
+        SceneManager.LoadScene("Documents");
+    }
 }

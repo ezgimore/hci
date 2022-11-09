@@ -22,4 +22,19 @@ public class HomeScene : MonoBehaviour
         SceneManager.LoadScene("AC");
     }
 
+    public void BlueprintsScene()
+    {
+        SceneManager.LoadScene("Blueprints");
+    }
+
+    public void DocumentsScene()
+    {
+        SceneManager.LoadScene("Documents");
+    }
+
+    public void GoToHomeScene()
+    {
+        SceneManager.LoadScene("Home");
+    }
+
 }
