@@ -16,6 +16,7 @@ public class ScrollableInputPanel : MonoBehaviour
     private Vector2 panelOffsetMinOriginal;
     private float panelHeightOriginal;
     private float currentKeyboardHeightRatio;
+    private const string maintenanceNotificationKey = "maintenanceNotification";
 
     public void Start()
     {
@@ -23,6 +24,8 @@ public class ScrollableInputPanel : MonoBehaviour
         panelRectTrans = panel.GetComponent<RectTransform>();
         panelOffsetMinOriginal = panelRectTrans.offsetMin;
         panelHeightOriginal = panelRectTrans.rect.height;
+
+        PlayerPrefs.SetInt(maintenanceNotificationKey, 0);
     }
 
     public void Update()
