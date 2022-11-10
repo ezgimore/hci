@@ -41,7 +41,17 @@ public class MaintenanceTaskScene : MonoBehaviour
         empty_notification_text.SetActive(true);
     }
     
-    public void HomeScene()
+    public void BlueprintsScene()
+    {
+        SceneManager.LoadScene("Blueprints");
+    }
+
+    public void DocumentsScene()
+    {
+        SceneManager.LoadScene("Documents");
+    }
+
+    public void GoToHomeScene()
     {
         SceneManager.LoadScene("Home");
     }

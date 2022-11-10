@@ -38,6 +38,11 @@ public class HomeScene : MonoBehaviour
         SceneManager.LoadScene("Blueprints");
     }
 
+    public void MaintenanceTaskScene()
+    {
+        SceneManager.LoadScene("MaintenanceTask");
+    }
+
     public void DocumentsScene()
     {
         SceneManager.LoadScene("Documents");
@@ -46,11 +51,6 @@ public class HomeScene : MonoBehaviour
     public void GoToHomeScene()
     {
         SceneManager.LoadScene("Home");
-    }
-    
-    public void MaintenanceTaskScene()
-    {
-        SceneManager.LoadScene("MaintenanceTask");
     }
 
 }
