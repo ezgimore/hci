@@ -1314,14 +1314,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1189519184}
         m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: RemoveUtil
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: lawn
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &98449199
@@ -1716,14 +1716,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2141735706}
         m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: RemoveUtil
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: water
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &136202518
@@ -3833,7 +3833,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 205503369}
         m_TargetAssemblyTypeName: CreateAccountScene, Assembly-CSharp
-        m_MethodName: HomeScene
+        m_MethodName: SkipInitialize
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7592,14 +7592,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 101053610}
         m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: RemoveUtil
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: dryer
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &793759658
@@ -8068,14 +8068,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 912210254}
         m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: RemoveUtil
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: light
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &882047314
@@ -10409,14 +10409,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 814237494}
         m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: RemoveUtil
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ac
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1066039814
@@ -10754,14 +10754,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1358507717}
         m_TargetAssemblyTypeName: DeleteObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
-        m_Mode: 1
+        m_MethodName: RemoveUtil
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: washer
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1112461002

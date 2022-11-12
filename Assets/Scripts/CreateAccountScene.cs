@@ -57,4 +57,14 @@ public class CreateAccountScene : MonoBehaviour
         // TODO check values of amenities
         SceneManager.LoadScene("Home");
     }
+
+    public void SkipInitialize()
+    {
+        string[] utils = new string[6] { "water", "washer", "dryer", "light", "lawn", "ac" };
+        foreach (var util in utils)
+        {
+            PlayerPrefs.SetInt(util, 0);
+        }
+        SceneManager.LoadScene("Home");
+    }
 }

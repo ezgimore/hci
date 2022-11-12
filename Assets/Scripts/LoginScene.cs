@@ -15,6 +15,13 @@ public class LoginScene : MonoBehaviour
     void Start()
     {
         /*inputField.GetComponent<TMP_InputField>().text*/
+        PlayerPrefs.SetInt("maintenanceNotification", 0);
+        string[] utils = new string[6] { "water", "washer", "dryer", "light", "lawn", "ac" };
+        foreach (var util in utils)
+        {
+            PlayerPrefs.SetInt(util, 1);
+        }
+
     }
 
     // Update is called once per frame

@@ -1,25 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class DeleteObject : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject target;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveUtil(String util)
     {
-        
-    }
-    //TODO
-    public void DestroyTarget()
-    {
-        //TODO Remove from person settings first
+        PlayerPrefs.SetInt(util, 0);
         Destroy(target);
     }
+
 }

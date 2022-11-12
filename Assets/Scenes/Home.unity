@@ -583,6 +583,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notification_bubble: {fileID: 574107208}
+  water: {fileID: 1621624949}
+  washer: {fileID: 1338483839}
+  light: {fileID: 1022574921}
+  lawn: {fileID: 1097447515}
 --- !u!1 &219359196
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class HomeScene : MonoBehaviour
 {
     public GameObject notification_bubble;
+
+    public GameObject water, washer, light, lawn;
 
     private const string maintenanceNotificationKey = "maintenanceNotification";
     
@@ -20,6 +23,34 @@ public class HomeScene : MonoBehaviour
         {
             notification_bubble.SetActive(true);
         }
+
+        string[] utils = new string[4] { "water", "washer", "light", "lawn" };
+        foreach (var util in utils)
+        {
+
+            if (util.Equals("water") && PlayerPrefs.GetInt(util) == 0)
+            {
+                Destroy(water);
+            }
+
+            else if (util.Equals("washer") && PlayerPrefs.GetInt(util) == 0 && PlayerPrefs.GetInt("dryer") == 0)
+            {
+                Destroy(washer);
+            }
+
+            else if (util.Equals("light") && PlayerPrefs.GetInt(util) == 0)
+            {
+                Destroy(light);
+            }
+
+            else if (util.Equals("lawn") && PlayerPrefs.GetInt(util) == 0)
+            {
+                Destroy(lawn);
+            }
+
+        }
+
+        
     }
 
     // Update is called once per frame
