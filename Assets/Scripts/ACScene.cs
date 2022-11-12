@@ -5,16 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class ACScene : MonoBehaviour
 {
+    public GameObject help_panel;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        help_panel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void ShowHelpInfo()
+    {
+        help_panel.SetActive(true);
+    }
+
+    public void HideHelpInfo()
+    {
+        help_panel.SetActive(false);
     }
 
     public void ContactScene()

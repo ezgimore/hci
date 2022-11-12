@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MaintenanceTaskScene : MonoBehaviour
 {
-    public GameObject panel, notification_panel, notification_bubble, empty_notification_text;
+    public GameObject panel, notification_panel, notification_bubble, empty_notification_text, help_panel;
 
     private const string maintenanceNotificationKey = "maintenanceNotification";
     
@@ -24,6 +24,7 @@ public class MaintenanceTaskScene : MonoBehaviour
             notification_bubble.SetActive(true);
             empty_notification_text.SetActive(false);
         }
+        help_panel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,6 +40,16 @@ public class MaintenanceTaskScene : MonoBehaviour
         notification_panel.SetActive(false);
         notification_bubble.SetActive(false);
         empty_notification_text.SetActive(true);
+    }
+
+    public void ShowHelpInfo()
+    {
+        help_panel.SetActive(true);
+    }
+
+    public void HideHelpInfo()
+    {
+        help_panel.SetActive(false);
     }
     
     public void BlueprintsScene()
