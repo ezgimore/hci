@@ -10,7 +10,7 @@ public class CreateAccountScene : MonoBehaviour
 {
     // set via the Unity editor
     public GameObject account_panel, info_panel;
-    public TMP_InputField u_name, pass, vpass, address; 
+    public TMP_InputField u_name, pass, vpass, address, ac_model, ac_age, ac_serviced; 
 
     
     // Start is called before the first frame update
@@ -54,7 +54,41 @@ public class CreateAccountScene : MonoBehaviour
 
     public void HomeScene()
     {
-        // TODO check values of amenities
+        // check values of amenities
+        if (PlayerPrefs.GetInt("ac") == 1)
+        {
+            String model = ac_model.GetComponent<TMP_InputField>().text;
+            String age = ac_age.GetComponent<TMP_InputField>().text;
+            String serviced = ac_serviced.GetComponent<TMP_InputField>().text;
+
+            if (model.Equals(""))
+            {
+                PlayerPrefs.SetString("ac_model", "");
+            }
+            else
+            {
+                PlayerPrefs.SetString("ac_model", model);
+            }
+
+            if (age.Equals(""))
+            {
+                PlayerPrefs.SetString("ac_age", "");
+            }
+            else
+            {
+                PlayerPrefs.SetString("ac_age", age);
+            }
+
+            if (serviced.Equals(""))
+            {
+                PlayerPrefs.SetString("ac_serviced", "");
+            }
+            else
+            {
+                PlayerPrefs.SetString("ac_serviced", serviced);
+            }
+        }
+        
         SceneManager.LoadScene("Home");
     }
 

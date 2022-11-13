@@ -2387,6 +2387,9 @@ MonoBehaviour:
   pass: {fileID: 957745552}
   vpass: {fileID: 2101631422}
   address: {fileID: 1695978181}
+  ac_model: {fileID: 1339201736}
+  ac_age: {fileID: 965771481}
+  ac_serviced: {fileID: 357392867}
 --- !u!1 &213125119
 GameObject:
   m_ObjectHideFlags: 0
