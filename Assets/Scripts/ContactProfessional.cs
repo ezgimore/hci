@@ -32,6 +32,10 @@ public class ContactProfessional : MonoBehaviour
         Application.OpenURL("tel:" + number);
     }
 
+    public void Mail(string email) {
+        Application.OpenURL("mailto:" + email);
+    }
+
     public void HomeScene()
     {
         SceneManager.LoadScene("Home");
