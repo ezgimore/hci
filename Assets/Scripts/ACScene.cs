@@ -6,11 +6,24 @@ using UnityEngine.SceneManagement;
 public class ACScene : MonoBehaviour
 {
     public GameObject help_panel;
+
+    public GameObject notification_bubble;
+
+    private const string maintenanceNotificationKey = "maintenanceNotification";
     
     // Start is called before the first frame update
     void Start()
     {
         help_panel.SetActive(false);
+
+        if (PlayerPrefs.GetInt(maintenanceNotificationKey) == 1)
+        {
+            notification_bubble.SetActive(false);
+        }
+        else
+        {
+            notification_bubble.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -47,5 +60,10 @@ public class ACScene : MonoBehaviour
     public void DocumentsScene()
     {
         SceneManager.LoadScene("Documents");
+    }
+
+    public void MaintenanceTaskScene()
+    {
+        SceneManager.LoadScene("MaintenanceTask");
     }
 }
