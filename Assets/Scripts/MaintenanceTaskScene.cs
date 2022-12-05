@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MaintenanceTaskScene : MonoBehaviour
 {
-    public GameObject panel, notification_panel, notification_bubble, empty_notification_text, help_panel;
+    public GameObject panel, notification_panel, notification_bubble, empty_notification_text, help_panel, yes_confirm_panel, remind_me_later_confirm_panel;
 
     private const string maintenanceNotificationKey = "maintenanceNotification";
     
@@ -24,7 +24,10 @@ public class MaintenanceTaskScene : MonoBehaviour
             notification_bubble.SetActive(true);
             empty_notification_text.SetActive(false);
         }
+        
         help_panel.SetActive(false);
+        yes_confirm_panel.SetActive(false);
+        remind_me_later_confirm_panel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,6 +43,9 @@ public class MaintenanceTaskScene : MonoBehaviour
         notification_panel.SetActive(false);
         notification_bubble.SetActive(false);
         empty_notification_text.SetActive(true);
+
+        yes_confirm_panel.SetActive(false);
+        remind_me_later_confirm_panel.SetActive(false);
     }
 
     public void ShowHelpInfo()
@@ -50,6 +56,26 @@ public class MaintenanceTaskScene : MonoBehaviour
     public void HideHelpInfo()
     {
         help_panel.SetActive(false);
+    }
+
+    public void ShowYesConfirmPanel()
+    {
+        yes_confirm_panel.SetActive(true);
+    }
+
+    public void ShowRemindMeLaterConfirmPanel()
+    {
+        remind_me_later_confirm_panel.SetActive(true);
+    }
+
+    public void HideYesConfirmPanel()
+    {
+        yes_confirm_panel.SetActive(false);
+    }
+
+    public void HideRemindMeLaterConfirmPanel()
+    {
+        remind_me_later_confirm_panel.SetActive(false);
     }
     
     public void BlueprintsScene()
