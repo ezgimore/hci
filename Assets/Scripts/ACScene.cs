@@ -7,7 +7,7 @@ using System;
 
 public class ACScene : MonoBehaviour
 {
-    public GameObject help_panel, ac_guide_panel, ac_guide_panel_2;
+    public GameObject help_panel, ac_guide_panel, ac_guide_panel_2, contact_panel;
 
     public GameObject notification_bubble;
 
@@ -21,6 +21,7 @@ public class ACScene : MonoBehaviour
         help_panel.SetActive(false);
         ac_guide_panel.SetActive(false);
         ac_guide_panel_2.SetActive(false);
+        contact_panel.SetActive(false);
 
         if (PlayerPrefs.GetInt(maintenanceNotificationKey) == 1)
         {
@@ -70,9 +71,22 @@ public class ACScene : MonoBehaviour
         help_panel.SetActive(false);
     }
 
-    public void ContactScene()
+    public void ShowContact()
     {
-        SceneManager.LoadScene("ContactProfessional", LoadSceneMode.Additive);
+        contact_panel.SetActive(true);
+    }
+
+    public void HideContact()
+    {
+        contact_panel.SetActive(false);
+    }
+
+    public void Call(string number) {
+        Application.OpenURL("tel:" + number);
+    }
+
+    public void Mail(string email) {
+        Application.OpenURL("mailto:" + email);
     }
 
     public void HomeScene()
