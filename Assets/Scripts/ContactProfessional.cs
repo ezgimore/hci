@@ -40,4 +40,9 @@ public class ContactProfessional : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+
+    public void GoBack()
+    {
+        SceneManager.UnloadSceneAsync("ContactProfessional");
+    }
 }

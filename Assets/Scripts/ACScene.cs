@@ -72,7 +72,7 @@ public class ACScene : MonoBehaviour
 
     public void ContactScene()
     {
-        SceneManager.LoadScene("ContactProfessional");
+        SceneManager.LoadScene("ContactProfessional", LoadSceneMode.Additive);
     }
 
     public void HomeScene()
