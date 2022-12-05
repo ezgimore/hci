@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using System.Text.RegularExpressions;
 
 // this script is attached to the EventSystem of the Login Scene
 public class LoginScene : MonoBehaviour
 {
     public TMP_InputField username;
     public TMP_InputField passcode;
+    public TMPro.TMP_Text error_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class LoginScene : MonoBehaviour
         {
             PlayerPrefs.SetInt(util, 1);
         }
-
+        error_text.text = "";
     }
 
     // Update is called once per frame
@@ -38,8 +40,11 @@ public class LoginScene : MonoBehaviour
 
     public void HomeScene()
     {
-        if(String.Equals(username.GetComponent<TMP_InputField>().text,"") || String.Equals(passcode.GetComponent<TMP_InputField>().text,""))
+        if(!Regex.IsMatch(username.GetComponent<TMP_InputField>().text, "^[a-zA-Z0-9]+$") || !Regex.IsMatch(passcode.GetComponent<TMP_InputField>().text, "^[a-zA-Z0-9]+$"))
+        {
+            error_text.text = "Username/Password is incorrect";
             return;
+        }
         SceneManager.LoadScene("Home");
     }
 }

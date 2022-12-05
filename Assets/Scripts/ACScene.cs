@@ -108,4 +108,9 @@ public class ACScene : MonoBehaviour
     {
         SceneManager.LoadScene("MaintenanceTask");
     }
+
+    public void GoToLoginScene()
+    {
+        SceneManager.LoadScene("Login");
+    }
 }

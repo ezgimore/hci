@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.Text.RegularExpressions;
 
 public class CreateAccountScene : MonoBehaviour
 {
@@ -39,6 +40,11 @@ public class CreateAccountScene : MonoBehaviour
         if (String.Equals(u,"") || String.Equals(p,"") || String.Equals(vp,"") || String.Equals(a,"") )
         {
             error_text.text = "Please fill in all fields";
+            return;
+        }
+        else if (!Regex.IsMatch(u, "^[a-zA-Z0-9]+$") || !Regex.IsMatch(p, "^[a-zA-Z0-9]+$") || !Regex.IsMatch(vp, "^[a-zA-Z0-9]+$") )
+        {
+            error_text.text = "Please use alphanumeric strings for username and password";
             return;
         }
         else if (!String.Equals(p,vp))
