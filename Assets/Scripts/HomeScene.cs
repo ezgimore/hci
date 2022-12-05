@@ -84,4 +84,9 @@ public class HomeScene : MonoBehaviour
         SceneManager.LoadScene("Home");
     }
 
+    public void GoToLoginScene()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
 }

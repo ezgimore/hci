@@ -10,6 +10,7 @@ public class CreateAccountScene : MonoBehaviour
 {
     // set via the Unity editor
     public GameObject account_panel, info_panel;
+    public TMPro.TMP_Text error_text;
     public TMP_InputField u_name, pass, vpass, address, ac_model, ac_age, ac_serviced; 
 
     
@@ -18,6 +19,7 @@ public class CreateAccountScene : MonoBehaviour
     {
         account_panel.SetActive(true);
         info_panel.SetActive(false);
+        error_text.text = "";
     }
 
     // Update is called once per frame
@@ -36,10 +38,12 @@ public class CreateAccountScene : MonoBehaviour
         String a = address.GetComponent<TMP_InputField>().text;
         if (String.Equals(u,"") || String.Equals(p,"") || String.Equals(vp,"") || String.Equals(a,"") )
         {
+            error_text.text = "Please fill in all fields";
             return;
         }
         else if (!String.Equals(p,vp))
         {
+            error_text.text = "Passwords do not match";
             return;
         }
         account_panel.SetActive(false);
@@ -101,4 +105,10 @@ public class CreateAccountScene : MonoBehaviour
         }
         SceneManager.LoadScene("Home");
     }
+
+    public void GoToLoginScene()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
 }

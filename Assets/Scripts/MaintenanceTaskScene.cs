@@ -67,4 +67,9 @@ public class MaintenanceTaskScene : MonoBehaviour
         SceneManager.LoadScene("Home");
     }
 
+    public void GoToLoginScene()
+    {
+        SceneManager.LoadScene("Login");
+    }
+
 }

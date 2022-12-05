@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreateAccount.unity
     guid: 8107ed2a4bf18284890e080bacc95f41
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ContactProfessional.unity
     guid: aa3c554a8bff24a2e894920f38d4983d
   - enabled: 1
