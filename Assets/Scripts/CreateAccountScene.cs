@@ -10,17 +10,20 @@ using System.Text.RegularExpressions;
 public class CreateAccountScene : MonoBehaviour
 {
     // set via the Unity editor
-    public GameObject account_panel, info_panel;
+    public GameObject account_panel, info_panel, confirm_remove_panel, content_panel;
     public TMPro.TMP_Text error_text;
     public TMP_InputField u_name, pass, vpass, address, ac_model, ac_age, ac_serviced; 
+    public TextMeshProUGUI confirm_remove_text;
+    private string current_removed_appliance;
 
-    
     // Start is called before the first frame update
     void Start()
     {
         account_panel.SetActive(true);
         info_panel.SetActive(false);
+        confirm_remove_panel.SetActive(false);
         error_text.text = "";
+        current_removed_appliance = "";
     }
 
     // Update is called once per frame
@@ -115,6 +118,25 @@ public class CreateAccountScene : MonoBehaviour
     public void GoToLoginScene()
     {
         SceneManager.LoadScene("Login");
+    }
+
+    public void ShowConfirmRemovePanel(string appliance_name)
+    {
+        confirm_remove_panel.SetActive(true);
+        confirm_remove_text.SetText("Are you sure you want to remove " + (appliance_name.Equals("ac") ? "A/C" : appliance_name) + "?");
+        current_removed_appliance = appliance_name;
+    }
+
+    public void RemoveAppliance()
+    {
+        GameObject appliance_entry = content_panel.transform.Find(current_removed_appliance).gameObject;
+        Destroy(appliance_entry);
+        HideConfirmRemovePanel();
+    }
+
+    public void HideConfirmRemovePanel()
+    {
+        confirm_remove_panel.SetActive(false);
     }
 
 }
