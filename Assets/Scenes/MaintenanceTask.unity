@@ -586,7 +586,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 550}
+  m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120964321
 MonoBehaviour:
@@ -929,7 +929,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1699067115}
         m_TargetAssemblyTypeName: MaintenanceTaskScene, Assembly-CSharp
-        m_MethodName: HideYesConfirmPanel
+        m_MethodName: HideRemindMeLaterConfirmPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1063,7 +1063,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1699067115}
         m_TargetAssemblyTypeName: MaintenanceTaskScene, Assembly-CSharp
-        m_MethodName: CompleteTask
+        m_MethodName: PostponeTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1808,7 +1808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 25}
+  m_AnchoredPosition: {x: 0, y: 110}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573927044
@@ -1831,7 +1831,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Only hit the "Yes" button if you have fully completed the maintenance task.
+  m_text: 'Only hit the "Yes" button if you have not completed the task and want
+    to postpone it for a later date.
+
+
+    If you continue, we will remind you again
+    in 1 week.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38fc13268388d1142ba4cd00f7d91f3d, type: 2}
   m_sharedMaterial: {fileID: -7052388369125697299, guid: 38fc13268388d1142ba4cd00f7d91f3d, type: 2}
@@ -4194,7 +4199,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1699067115}
         m_TargetAssemblyTypeName: MaintenanceTaskScene, Assembly-CSharp
-        m_MethodName: HideYesConfirmPanel
+        m_MethodName: HideRemindMeLaterConfirmPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4792,7 +4797,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1699067115}
         m_TargetAssemblyTypeName: MaintenanceTaskScene, Assembly-CSharp
-        m_MethodName: DismissNotificationPanel
+        m_MethodName: ShowRemindMeLaterConfirmPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5203,7 +5208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1699067115}
         m_TargetAssemblyTypeName: MaintenanceTaskScene, Assembly-CSharp
-        m_MethodName: HideYesConfirmPanel
+        m_MethodName: HideRemindMeLaterConfirmPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5444,7 +5449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Complete the Task?
+  m_text: Postpone the Task?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38fc13268388d1142ba4cd00f7d91f3d, type: 2}
   m_sharedMaterial: {fileID: -7052388369125697299, guid: 38fc13268388d1142ba4cd00f7d91f3d, type: 2}
