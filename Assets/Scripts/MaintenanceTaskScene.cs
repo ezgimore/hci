@@ -36,7 +36,7 @@ public class MaintenanceTaskScene : MonoBehaviour
         
     }
 
-    public void DismissNotificationPanel()
+    public void CompleteTask()
     {
         PlayerPrefs.SetInt(maintenanceNotificationKey, 1);
 
@@ -45,6 +45,16 @@ public class MaintenanceTaskScene : MonoBehaviour
         empty_notification_text.SetActive(true);
 
         yes_confirm_panel.SetActive(false);
+    }
+
+    public void PostponeTask()
+    {
+        PlayerPrefs.SetInt(maintenanceNotificationKey, 1);
+
+        notification_panel.SetActive(false);
+        notification_bubble.SetActive(false);
+        empty_notification_text.SetActive(true);
+
         remind_me_later_confirm_panel.SetActive(false);
     }
 
