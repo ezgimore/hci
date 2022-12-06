@@ -7,7 +7,7 @@ using System;
 
 public class ACScene : MonoBehaviour
 {
-    public GameObject help_panel, ac_guide_panel, ac_guide_panel_2, contact_panel;
+    public GameObject help_panel, ac_guide_panel, ac_guide_panel_2, contact_panel, fixed_confirm_panel;
 
     public GameObject notification_bubble;
 
@@ -22,6 +22,7 @@ public class ACScene : MonoBehaviour
         ac_guide_panel.SetActive(false);
         ac_guide_panel_2.SetActive(false);
         contact_panel.SetActive(false);
+        fixed_confirm_panel.SetActive(false);
 
         if (PlayerPrefs.GetInt(maintenanceNotificationKey) == 1)
         {
@@ -79,6 +80,16 @@ public class ACScene : MonoBehaviour
     public void HideContact()
     {
         contact_panel.SetActive(false);
+    }
+
+    public void ShowFixedConfirmPanel()
+    {
+        fixed_confirm_panel.SetActive(true);
+    }
+
+    public void HideFixedConfirmPanel()
+    {
+        fixed_confirm_panel.SetActive(false);
     }
 
     public void Call(string number) {
