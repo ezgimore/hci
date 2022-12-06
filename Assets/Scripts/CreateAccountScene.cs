@@ -123,14 +123,17 @@ public class CreateAccountScene : MonoBehaviour
     public void ShowConfirmRemovePanel(string appliance_name)
     {
         confirm_remove_panel.SetActive(true);
-        confirm_remove_text.SetText("Are you sure you want to remove " + (appliance_name.Equals("ac") ? "A/C" : appliance_name) + "?");
+        confirm_remove_text.SetText("Are you sure you want to remove " + (appliance_name.Equals("AC") ? "A/C" : appliance_name) + "?");
         current_removed_appliance = appliance_name;
     }
 
+
+    // NOTE: This method requires current_removed_appliance be set to the name of the appliance entry in the editor so it may be removed
     public void RemoveAppliance()
     {
         GameObject appliance_entry = content_panel.transform.Find(current_removed_appliance).gameObject;
         Destroy(appliance_entry);
+        PlayerPrefs.SetInt(current_removed_appliance.ToLower(), 0);
         HideConfirmRemovePanel();
     }
 
