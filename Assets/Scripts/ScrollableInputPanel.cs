@@ -30,7 +30,8 @@ public class ScrollableInputPanel : MonoBehaviour
 
     public void Update()
     {
-        if (inputField.isFocused)
+        //if (inputField.isFocused)
+        if (TouchScreenKeyboard.visible)
         {
             float newKeyboardHeightRatio = GetKeyboardHeightRatio();
             if (currentKeyboardHeightRatio != newKeyboardHeightRatio)
